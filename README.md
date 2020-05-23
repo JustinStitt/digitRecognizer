@@ -1,4 +1,7 @@
 # digitRecognizer
+
+Regarded as the "Hello, World!" of machine learning.
+
 Uses Tensorflow and Keras with MNIST dataset to recognize handwritten digits with reasonable accuracy.
 
 I've trained the model using a feed-forward sequential deep learning neural network.
