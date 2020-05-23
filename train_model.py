@@ -49,21 +49,16 @@ print(val_acc)
 #loaded_model = tf.keras.models.load_model(filename)
 
 #finally... make predictions!
-#preds = model.predict(x_test)
-#this will yield a distribution of probability for each ouput. lets take the max value (most likely as determined by our model)
-#print(np.argmax(preds[0]))#for index 0, the highest prob from [0-9] is our prediction
-#plt.imshow(x_test[0],cmap=plt.cm.binary)
+##this will yield a distribution of probability for each ouput. lets take the max value (most likely as determined by our model)
+##plt.imshow(x_test[0],cmap=plt.cm.binary)
 #plt.show()
 
-
-#added
-image = cv2.imread("test_image_01.png", cv2.IMREAD_GRAYSCALE)  # uint8 image
-image = np.array(image).reshape(-1,28,28)
-image = image/255.0#normalize and convert to float32
-#print(image)
-
-preds = model.predict(image)
-print(preds[0])
-print(np.argmax(preds))
-plt.imshow(image[-1],cmap=plt.cm.binary)
-plt.show()
+#slideshow of first 25 predictions
+preds = model.predict(x_test)#returns [ [0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0] ]
+for x in range(25):
+    actual = y_test[x]
+    prediction = preds[x]
+    plt.imshow(x_test[x])#,cmap = plt.cm.binary)
+    plt.ylabel('prediction: {}'.format(np.argmax(prediction)))
+    plt.xlabel('actual: {}'.format(actual))
+    plt.show()
