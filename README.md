@@ -14,7 +14,7 @@ The next step would be to upgrade to a CNN which is notoriously better for compu
 
 **Example w/ Interface for Drawing Digits**
 
-![](digitsRecogGIF.gif)
+![](visuals/digitsRecogGIF.gif)
 
 (nerdy stuff)
 
