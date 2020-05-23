@@ -6,7 +6,7 @@ Uses Tensorflow and Keras with MNIST dataset to recognize handwritten digits wit
 
 I've trained the model using a feed-forward sequential deep learning neural network.
 
-The model trained on 40,000 feature sets with labels for the digits (0-9).
+The model was trained on 40,000 feature sets with labels for the digits (0-9).
 Then the model was tested for minimal loss and high accuracy against another 10,000 unseen feature sets. 
 An accuracy of about 97% is what I achieved and is quite easy to achieve.
 
